@@ -1,0 +1,305 @@
+
+{% extends 'home.html'%}
+{% load static %}
+{% block content %}
+
+
+
+<section id="hero" class="d-flex align-items-center">
+
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <h1>Better treatment with Medcare</h1>
+        <h2>Self-care is not self-indulgence,it is self preservation</h2>
+        <div>
+          <a href="#appointment" class="btn-get-started scrollto">Book Appointment</a>
+        </div>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        <img src="{% static  'img/loginimage.jpg' %}" class="img-fluid animated" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<main id="main">
+
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+
+      <div class="row justify-content-between">
+        <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
+          <img src="{% static 'img/istockphoto-1189916786-612x612.jpeg' %}" class="img-fluid" alt="" data-aos="zoom-in">
+        </div>
+        <div class="col-lg-6 pt-5 pt-lg-0">
+          <h3 data-aos="fade-up">MEDCARE</h3>
+          <p data-aos="fade-up" data-aos-delay="100">
+            Medcare hospital is the best multi-speciality hospital in Boroko. We pride ourselves in upholding good values in healthcare. We are known for our the best in class services to all our patients with the help of our eminent and trusted Doctors and Surgeons, equipped with the newest technologies.
+
+            We are obliged to provide all types of Diagnosis, Internal Medicine Treatments and Health Care Services in Calicut and provide infection-free services such as Maternity, Obstetrics & Gynecology, Orthopedic, Laparoscopic, Pediatric, Cardiology, ENT, Nephrology and more.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Departments</h2>
+          
+        </div>
+
+        
+
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+   
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery">{{i.depname}}</a>
+                
+              </div>
+             
+            </div>
+          </div>
+        
+
+          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (5).jpeg' %} " class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery">Cardiology</a>
+                
+              
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (4).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery">ENT</a>
+                
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (8).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery" >Emergency </a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/images (3).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery" >Ortho</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/images (1).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery" >Nephrology</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (15).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery">opthalmology</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (2).jpeg' %}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery" >Dermatology</a>
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="{% static 'img/download (6).jpeg' %} " class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery" >Neurology</a>
+                
+              </div>
+            </div> -->
+          </div>
+
+          
+
+          
+
+          
+
+          
+
+       
+
+        </div>
+
+      </div>
+  
+
+
+    <div class="row contact " id="appointment">
+
+      <div class="section-title">
+        <h2>Get Appointment</h2>
+       
+      </div>
+      
+ <div class="col-lg-3"></div>
+
+    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="name">Select Department</label>
+           <select name="" id="" class="form-control">
+            
+             <option value="">cardiology</option>
+          
+           </select>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="name">Select Dr</label>
+           <select name="" id="" class="form-control">
+             <option value="">DR Rajesh</option>
+             <option value="">DR Fyiaz</option>
+             <option value="">DR Rameesa</option>
+             <option value="">DR Rekha</option>
+            
+           </select>
+          </div>
+          <div class="form-group col-md-6 mt-3 mt-md-0">
+            <label for="name">Firstname</label>
+            <input type="text" class="form-control" name="fname" placeholder="Your Firstname" required>
+          </div>
+          <div class="form-group col-md-6 mt-3 mt-md-0">
+            <label for="name">Lastname</label>
+            <input type="text" class="form-control" name="lname"  placeholder="Your Lastname" required>
+          </div>
+        
+        <div class="form-group col-md-6 mt-3 mt-md-0">
+          <label for="name">Mobile</label>
+          <input type="number" class="form-control" name="phone" placeholder="Your Mobile no:      " required>
+        </div>
+        <div class="form-group col-md-6 mt-3 mt-md-0">
+          <label for="name">Date of Appointment</label>
+          <input type="date" class="form-control" name="date"  placeholder="select date" required>
+        </div>
+      
+    
+        
+       
+        <div class="text-center"><button type="submit">Submit</button></div>
+      </form>
+    </div>
+    <div class="col-lg-3"></div>
+  </div>
+
+
+  <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+         
+        </div>
+
+  <div class="row">
+
+      <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>Bike street,Borako</p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>info@example.com</p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+99999999955939003</p>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+        </div>
+
+      </div>
+
+      <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="form-group col-md-6">
+              <label for="name">Your Name</label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group col-md-6 mt-3 mt-md-0">
+              <label for="name">Your Email</label>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <label for="name">Subject</label>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <label for="name">Message</label>
+            <textarea class="form-control" name="message" rows="10" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Contact Us Section -->
+
+</main><!-- End #main -->
+
+  {% endblock %}
+
+  
