@@ -3,16 +3,18 @@
 {% load static %}
    <!-- ======= Services Section ======= -->
    <section id="services" class="services section-bg">
-      
+    {% for i in dep1 %}
     <div class="row service-title">
-        <h1>Pediatrics</h1>
+     
+        <h1>{{i.depname}}</h1>
     </div>
     <div class="row content">
         <div class="col-lg-4 col-md-4">
-            <img src="{% static 'img/download (1).jpeg' %}" alt="" class="img-fluid dp-img">
+            <img src="/hmsadmin/media/{{i.imagefile}}" alt="" class="img-fluid dp-img">
         </div>
-        <div class="col-lg-8 col-md-8 definition">Pediatrics is the branch of medicine dealing with the health and medical care of infants, children, and adolescents from birth up to the age of 18.</div>
+        <div class="col-lg-8 col-md-8 definition">{{i.description}}</div>
     </div>
+    {% endfor %}
     <hr>
     <h1 class=text-center>Our Specialised Doctors</h1>
     <div class="row doct-details">

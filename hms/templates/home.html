@@ -49,10 +49,10 @@
           <li class="dropdown"><a href="#"><span>Specialist</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               
+            {% for i in dep %}
+              <li><a href="{% url 'department' depid=i.id %}">{{i.depname}}</a></li>
               
-              <li><a href="{% url 'department' %}">pediatrics</a></li>
-              
-           
+           {% endfor %}
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

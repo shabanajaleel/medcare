@@ -1,0 +1,101 @@
+{% extends 'header.html'%}
+{% block content %}
+
+
+
+<div class="container-fluid px-4">
+  <div class="row g-3 my-2">
+
+<div class="col-lg-10 dashboard my-3" id="doctor_id">
+  <h3 class="p-2 ">Staff Registration</h3>
+ 
+   <div class="row content">
+    <form action="/admin/staffadd/" id="doctor-form" method="POST">
+        {% csrf_token %}
+        <div class="row p-2">
+          
+            <div class="col-sm-6 mt-2">
+                <input type="text" placeholder="staff_id" name="staffid" class="form-control" >
+              </div>
+              <div class="col-sm-6">
+                </div>
+        
+            
+              <div class="col-sm-6 mt-2">
+                <input type="text" name="fname" placeholder="First Name" class="form-control">
+              </div>
+              <div class="col-sm-6 mt-2">
+                <input type="text" name="lname" placeholder="Last Name" class="form-control">
+              </div>
+            
+
+            
+              <div class="col-sm-6 mt-2">
+                <input type="number" name="age" placeholder="Age" class="form-control">
+              </div>
+              <div class="col-sm-6 mt-2">
+                <input type="number" name="mobile" placeholder="Mobile No" class="form-control">
+              </div>
+
+            <div class="col-sm-6 mt-2">
+              <input type="text" name="place" placeholder="place" class="form-control">
+            </div>
+            <div class="col-sm-6 mt-2">
+              <input type="text" name="email" placeholder="email" class="form-control">
+            </div>
+          
+            </div>
+
+            
+            
+            
+            <div class="col-sm-12 mt-2">
+            
+                <input type="password" name="password" placeholder="Password" class="form-control">
+            </div>
+
+
+            <div class="col-sm-12 mt-2">
+            
+             
+              <select id="" name="cat" class="form-select bg-light" >
+                
+                  <option value="" selected>Select your staff catogory</option>
+                  {% for i in cat %}
+                  <option value="{{i.id}}" >{{i.catogoryname}}</option>
+                 {% endfor %}
+              </select>
+
+            </div>
+
+            <div class="col-sm-12 mt-2">
+            
+            <select name="dep" id="" class="form-select bg-light">
+           
+                <option value="" selected>Select your department</option>
+                {% for i in dep %}
+                <option value="{{i.id}}" >{{i.depname}}</option> 
+                {% endfor %}
+             
+            </select>
+            </div>
+          
+
+            <div class="col-sm-12 mt-2"><label for="">Join Date</label><input type="date" name="date" placeholder="Join Date" class="form-control jdate"></div>
+            
+            <div class="col-sm-12 mt-2"><input type="number" placeholder="Years of Experience" name="exp" class="form-control"></div>
+            <div class="col-sm-12 mt-2"><textarea name="address" id="" placeholder="Enter Address" cols="5" rows="2"  class="form-control"></textarea></div>
+            
+            <div class="col-sm-12 mt-2">{{msg}}</div>
+            <div class="col-sm-4 offset-sm-4 p-2 text-center">
+            <button type="submit" class="btn btn-secondary">Submit</button>
+            <a href="" class="btn btn-secondary">Back</a>
+            </div>
+          </form>
+           </div>
+            </div>
+          </div>
+        </div>
+          
+
+              {% endblock %}

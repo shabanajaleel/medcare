@@ -32,6 +32,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'hms',
+    'hmsadmin',
+    'hmsdoctor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,8 +78,12 @@ WSGI_APPLICATION = 'medcare.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+      'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME':'medcare',
+        'USER':'postgres',
+        'PASSWORD':'shabana123',
+        'HOST':'localhost',
+        'PORT':'5432',
     }
 }
 
@@ -119,9 +125,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL='hmsadmin/media/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,"static")
 ]
+MEDIA_ROOT=os.path.join(BASE_DIR,'hmsadmin/media')
 
 
 # Default primary key field type

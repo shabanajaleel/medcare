@@ -1,0 +1,34 @@
+
+body{
+    background: url("{../../../../static/img/logimage.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(224, 223, 220);
+}
+.loginimage{
+    padding-top: 20%;
+}
+.login_head
+{
+    color:rgb(97, 94, 94);
+    text-align: center;
+}
+.error{
+    color:rgb(139, 33, 33);
+    padding-top:5px
+
+  }
+  .form-select{
+      color:black
+  }
+
+
+.demo
+{
+   
+    border: 2px solid rgb(235, 235, 225);
+    margin-top: 30%;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px 2px rgb(164, 164, 165);
+    
+}

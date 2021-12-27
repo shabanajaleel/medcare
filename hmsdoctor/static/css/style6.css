@@ -1,0 +1,240 @@
+.body{
+    font-family: Georgia, serif;
+  }
+  
+  #wrapper {
+      overflow-x: hidden;
+    }
+    .set-color{
+        background-color:rgb(65, 106, 139) ; 
+        color:white 
+    }
+    
+    #sidebar-wrapper {
+     
+      min-height: 100vh;
+      margin-left: -15rem;
+      -webkit-transition: margin 0.25s ease-out;
+      -moz-transition: margin 0.25s ease-out;
+      -o-transition: margin 0.25s ease-out;
+      transition: margin 0.25s ease-out;
+      background-color:rgb(65, 106, 139) ;
+      color:white
+    }
+    .set-card
+    {
+        background-color: #84a1c2;
+        color:white
+    }
+    
+    #sidebar-wrapper .sidebar-heading {
+      padding: 0.875rem 1.25rem;
+      font-size: 1.2rem;
+    }
+    
+    #sidebar-wrapper .list-group {
+      width: 15rem;
+    }
+    
+    #page-content-wrapper {
+      min-width: 100vw;
+    }
+    .list-group-item
+    {
+      
+        background-color:inherit;
+        color:white
+    }
+    .list-group-item:hover
+    {
+      
+        background-color: #84a1c2;
+        color:white
+    }
+    
+    #wrapper.toggled #sidebar-wrapper {
+      margin-left: 0;
+    }
+    
+    #menu-toggle {
+      cursor: pointer;
+    }
+    
+    .list-group-item {
+      border: none;
+      padding: 20px 30px;
+    }
+    
+    .list-group-item.active {
+      background-color: transparent;
+      color: white;
+      font-weight: bold;
+      border: none;
+    }
+    body{
+      background-color: white
+    
+  }
+  
+  .header
+  {
+      background-color: rgb(65, 106, 139);
+     
+     box-shadow: 1.5px 1.5px 1.5px 1.5px ;
+      border-radius: 2px;
+     
+      padding: 5px;
+  }
+  .error
+  {
+      color:rgb(231, 140, 140);
+      padding-top:5px
+  
+  }
+  .form-select
+  {
+        color:rgb(83, 78, 78);
+  }
+  .jdate
+  {
+      color:rgb(83, 78, 78);
+  }
+  .doctform
+  {
+      background-color: rgb(65, 106, 139);
+      color:white
+  }
+  .doctform:hover{
+      color:white
+  }
+  .left
+  {
+    
+      background-color:  rgb(65, 106, 139);
+      box-shadow: 1.5px 1.5px 1.5px 1.5px  rgb(65, 106, 139);
+     
+      color: white; 
+      height: 600px;
+     
+  }
+  .right
+  {
+      height: 600px;
+      overflow-x: hidden;
+      overflow-y: auto;
+  }
+  input[type=search] ::placeholder
+  {
+  color: white;
+  }
+  .left a{
+      color:white;
+      text-decoration: none;
+  }
+  .nav-item:hover
+  {
+    
+      background-color: #84a1c2;
+  }
+  
+  .nav-link:visited{
+      color:white; 
+  }
+  .nav-item:active
+  {
+      color:white;
+      border:none
+  }
+  .nav-item
+  {
+      text-align: left;
+      color:white;
+  }
+  .nav-link:hover
+  {
+      color:white
+  }
+  
+  .dropdown-item
+  {
+      background-color: none;
+  }
+  .dropdown-item:visited
+  {
+      background-color: none;
+  }
+  .dashboard{
+      background-color: #84a1c2;
+      color:white;
+     
+      border: 1px solid white;
+      box-shadow:  2px 2px 10px  #79b2f3;
+    
+  }
+  .dashboard_home
+  {
+      background-color: #84a1c2;
+      border: 1px solid white;
+      box-shadow:  2px 2px 10px  #888888;
+    
+  }
+  .button-class
+  {
+      display:none;
+  }
+  .nav-class
+  {
+  
+    align-items: right;
+         
+  }
+  
+  .content
+  {
+      background-color: white;
+      color:black
+  }
+  .set{
+     
+       font-weight: 12px;
+   }
+   .search_button{
+       border-color:rgb(238, 235, 238);
+       border-radius: 8px;
+       background-color:  rgb(65, 106, 139);
+       color:white;
+       padding-left: 8px;
+   }
+  
+   .dropdown-menu-style
+   {
+   background-color: #84a1c2;
+   margin: 2px;
+   }
+   .dropdown-menu-style .dropdown-item:hover{
+          background-color: rgb(65, 106, 139);
+          color: white;
+   }
+   .chart-container {
+       
+      border: 2px solid rgb(65, 106, 139);
+      width: 70%;
+      height: 70%;
+     
+    }
+  
+    
+    @media (min-width: 768px) {
+      #sidebar-wrapper {
+        margin-left: 0;
+      }
+    
+      #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+      }
+    
+      #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+      }
+    }

@@ -60,11 +60,11 @@
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-   
+   {% for i in dep %}
           
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="" class="img-fluid" alt="">
+              <img src="/hmsadmin/media/{{i.imagefile}}" class="img-fluid" alt="">
               <div class="portfolio-links">
                 <a href="" class="portfolio-lightbox" data-gallery="portfolioGallery">{{i.depname}}</a>
                 
@@ -72,6 +72,7 @@
              
             </div>
           </div>
+          {% endfor %}
         
 
           <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -186,9 +187,9 @@
           <div class="form-group col-md-6">
             <label for="name">Select Department</label>
            <select name="" id="" class="form-control">
-            
-             <option value="">cardiology</option>
-          
+            {% for i in dep %}
+             <option value="{{i.id}}">{{i.depname}}</option>
+          {% endfor %}
            </select>
           </div>
           <div class="form-group col-md-6">
@@ -265,7 +266,8 @@
       </div>
 
       <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+        <form action="/contact/" method="POST" role="form" >
+          {% csrf_token %}
           <div class="row">
             <div class="form-group col-md-6">
               <label for="name">Your Name</label>
@@ -285,9 +287,9 @@
             <textarea class="form-control" name="message" rows="10" required></textarea>
           </div>
           <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+            
+            <div class="error-message">{{msg}}</div>
+            
           </div>
           <div class="text-center"><button type="submit">Send Message</button></div>
         </form>

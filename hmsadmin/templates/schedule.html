@@ -1,0 +1,74 @@
+{% extends 'header.html'%}
+{% block content %}
+
+
+<div class="container-fluid px-4">
+  <div class="row g-3 my-2">
+
+
+<div class="col-lg-12 dashboard my-3" id="dr-schedule">
+  <h3 class="p-2 ">Schedule a doctor</h3>
+ 
+   <div class="row content">
+    <form action="" id="schedule-form">
+        <div class="row p-2">
+          
+            <div class="col-sm-12 m-2">
+                <div class="row">
+              <div class="col-sm-6">
+                <input type="text" placeholder="Dr ID" class="form-control" r>
+              </div>
+
+              <div class="col-sm-6 ">
+                
+                <select name="" id="" class="form-select bg-light">
+                    <option value="" selected>Select your doctor</option>
+                    <option value="" >Dr Rahees</option>
+                    <option value="">Dr Raj</option>
+                    <option value="">Dr Geetha</option>
+                </select>
+                </div>
+            </div>
+            </div>
+     
+            <div class="col-sm-12 m-2">
+            <label for="select Date">Select Date:</label>
+               <input type="date" name="op-date" placeholder="select Date" class="form-control">
+            </div>
+                
+            <div class="col-sm-12 m-2">
+            
+                <input type="text" name="start" placeholder="starting time " class="form-control">
+            </div>
+            <div class="col-sm-12 m-2">
+            
+                <input type="text" name="end" placeholder="ending time " class="form-control">
+            </div>
+
+            <div class="col-sm-12 m-2">
+            
+                <input type="text" name="perpatient" placeholder="op time per patient " class="form-control">
+            </div>
+            <div class="col-sm-12 m-2">
+            
+                <input type="text" name="avail" placeholder="availability " class="form-control">
+            </div>
+
+
+          
+
+       
+           
+            
+            <div class="col-sm-4 offset-sm-4 p-2 text-center">
+            <button type="submit" class="btn btn-secondary">Submit</button>
+            <a href="" class="btn btn-secondary">Edit</a>
+            </div>
+          </form>
+           </div>
+            </div>
+          </div>
+        </div>
+          
+
+              {% endblock %}
