@@ -34,6 +34,12 @@ def fnappointment(request):
 # doctor appointment view
 
 def fnviewappointment(request):
+    if request.method=="POST":
+        doc=request.POST['doc']
+        day=request.POST['day']
+        obj=appointments.objects.filter(doc_id=doc,day_id=day)
+        return render(request,'viewappointment.html',{'data':obj})
+
     doctors=doctoradd.objects.filter(status=1)
     return render(request,'viewappointment.html',{'doc':doctors})
 
