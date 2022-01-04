@@ -192,6 +192,7 @@
         clickable: true
       }
     });
+    
   
     /**
      * Clients Slider

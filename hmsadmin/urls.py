@@ -17,9 +17,14 @@ urlpatterns=[
     path('adddepartment/',views.Adddepartment,name='adddepartment'),
     path('contactqueries/',views.Contactqueries,name='queries'),
     path('opschedule/',views.Opschedule,name='schedule'),
+    path('scheduledoctor/',views.doctorschedule,name='scheduledoctor'),
     path('logout/',views.fnlogout,name="logout"),
     path('<dep_id>',views.fndelete,name="delete"),
-    path('update/<upd_id>',views.Adddepartment,name="updatedep"),
-     path('deletedoc/<docid>',views.fndeletedoc,name="deletedoc"),
+    path('update/<upd_id>',views.updatedepartment,name="updatedep"),
+    path('updatedepartment/',views.updatedep,name="updatedepartment"),
+    path('deletedoc/<docid>',views.fndeletedoc,name="deletedoc"),
+    path('deletestaff/<staff_id>',views.fndeletestaff,name="deletestaff"),
+    path('updatestaff/<updstaff_id>',views.fnupdatestaff,name="updatestaff"),
+    path('updatecat/<updcat_id>',views.fnupdatecatogory,name="updatecat"),
     path('deletequery/<query_id>',views.fndeletequery,name="deletequery")
 ]

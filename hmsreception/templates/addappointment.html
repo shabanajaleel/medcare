@@ -1,0 +1,91 @@
+{% extends 'recheader.html'%}
+{% block content%}
+<div class="container-fluid px-4">
+    <div class="row g-3 my-2">
+<div class="col-lg-10 dashboard my-3" id="doctor_Appointment">
+    <h3 class="p-3"> Doctor Appointment</h3>
+    <div class="row content">
+      <form action="" id="appoint-form" method="POST">
+        {% csrf_token %}
+
+        <!-- code to display error message -->
+       
+        <div class="row py-2">
+          {% if messages %}
+          {% for message in messages %}
+          <div class="alert alert-warning alert-dismissible fade show" role="alert">
+           {{message}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+          {% endif%}
+        </div>
+       
+       
+
+
+        <div class="row py-2">
+        
+              <div class="col-sm-6 ">
+               <input type="text" placeholder="First Name" name="fname" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                <input type="text" placeholder="Last Name" name="lname" class="form-control">
+              </div>
+            </div>
+           
+            
+  
+              <div class="row">
+              <div class="col-sm-6 ">
+                <input type="number" placeholder="Age" name="age" class="form-control">
+              </div>
+              <div class="col-sm-6">
+                <input type="number" placeholder="Mobile Number" name="mobile" class="form-control">
+              </div>
+            </div>
+            
+            
+            
+            
+            <div class="col-sm-12 mt-2"><textarea name="address" id="" cols="5" rows="5"  class="form-control" placeholder="Address"></textarea></div>
+  
+  
+            <div class="col-sm-12 mt-2">
+            
+              
+              <select name="department" id="dep" class="form-select bg-light"  onchange="selectdoctor()" >
+                  <option value="" selected>Select Department</option>
+
+                  {% for i in dep %}
+                  <option value="{{i.id}}" >{{i.depname}}</option>
+                 
+                  {% endfor %}
+              </select>
+  
+            </div>
+  
+            <div class="col-sm-12 mt-2">
+           
+            <select name="doc" id="doctor" class="form-select bg-light" onchange="selectday()">
+                <option value="" selected>Select your doctor</option>
+             
+            </select>
+            </div>
+            <div class="col-sm-12 mt-2">
+                <select name="day" id="opday" class="form-select bg-light">
+                    <option value="" selected>Select consultation day</option>
+                    
+                </select>
+                
+            </div>
+  
+            <div class="col-sm-4 offset-sm-4 p-2 text-center">
+            <button class="btn btn-secondary" type="submit" >Submit</button>
+            </div>
+            </form>
+            </div>
+            </div>
+            </div>
+            </div>
+            {% endblock %}

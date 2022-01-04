@@ -10,13 +10,20 @@
   <h3 class="p-2 ">Add Department</h3>
  
    <div class="row content">
-    <form action="/admin/adddepartment/" id="dep-form" method="POST" enctype="multipart/form-data">
-      {% csrf_token %}
-     
-        <div class="row p-2">
-          {% if adddep %}
    
+          {% if adddep %}
           {% for i in adddep %}
+          <form action="/admin/updatedepartment/" id="dep-form" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+           
+              <div class="row p-2">
+                <div class="col-sm-12 m-2">
+              
+            
+                  <input type="text" name="depid"  value="{{i.id}}" hidden>
+               </div>
+   
+         
             <div class="col-sm-12 m-2">
               
             
@@ -24,9 +31,9 @@
             </div>
                 
             <div class="col-sm-12 m-2">
-            
-               <label for="formFileld" class="form-label">Upload Image:</label>
-               <input type="file" class="form-control form-control-lg" name="inputimage" id="formFileLg" >
+            <img src="/hmsadmin/media/{{i.imagefile}}" alt=""><br>
+               <label for="formFileld" class="form-label">Change Image:</label>
+               <input type="file" class="form-control form-control-lg" name="inputimage1" id="formFileLg" >
             </div>
 
 
@@ -34,8 +41,18 @@
 
        
             <div class="col-sm-12 m-2"><textarea name="description" id="" placeholder="Enter dep description" cols="5" rows="5"  class="form-control" >{{i.description}}</textarea></div>
+            
+            {{msg}}
+            <div class="col-sm-4 offset-sm-4 p-2 text-center">
+            <button type="submit" class="btn btn-secondary">Submit</button>
+            <a href="{% url 'department' %}" class="btn btn-secondary">Back</a>
+            </div>
             {% endfor %}
             {% else %}
+            <form action="/admin/adddepartment/" id="dep-form" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+             
+                <div class="row p-2">
             <div class="col-sm-12 m-2">
               
             
@@ -56,15 +73,17 @@
             
             
             </div>
-            {% endif %}
+          
             {{msg}}
             <div class="col-sm-4 offset-sm-4 p-2 text-center">
             <button type="submit" class="btn btn-secondary">Submit</button>
             <a href="{% url 'department' %}" class="btn btn-secondary">Back</a>
             </div>
+           
             
           </div>
           </form>
+          {% endif %}
            </div>
           
             </div>

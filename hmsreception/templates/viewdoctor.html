@@ -1,0 +1,25 @@
+{% extends 'recheader.html'%}
+{% block content%}
+<div class="container-fluid px-4">
+    <form action="/reception/viewdoctor/" method='POST'>
+        {% csrf_token %}
+    <div class="row g-3 my-2">
+        <div class="col-lg-3"></div>
+        
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-12"><input type="text" name="depdoc" placeholder="Select Department/Doctor" class="form-control"></div>
+                
+            </div>
+            <div class="text-center mt-3"><button type="submit" class="btn  doctform ">View Doctors</button></div>
+            <div class="text-center mt-3">{{msg}}</div>
+            
+            
+        </div>
+    
+        <div class="col-lg-3"></div>
+        
+            </div>
+        </form>
+            </div>
+            {% endblock %}

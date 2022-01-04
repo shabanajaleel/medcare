@@ -7,6 +7,8 @@ def Home(request):
     for i in obj1:
         print(i.depname)
     return render(request,'index.html',{'dep':obj1})
+
+
     
 
 def Homehead(request):    
@@ -15,8 +17,9 @@ def Homehead(request):
 def fndepart(request,depid):
     obj1=departmentAdd.objects.all()
     obj2=departmentAdd.objects.filter(id=depid)
+    obj3=doctoradd.objects.filter(department_id=depid,status=1)
     
-    return render(request,'depview.html',{'dep1':obj2,'dep':obj1})
+    return render(request,'depview.html',{'dep1':obj2,'dep':obj1,'doc':obj3})
 
 def fnqueries(request):
     try:

@@ -1,6 +1,8 @@
 from random import expovariate
 from django.db import models
 from django.db.models.deletion import CASCADE
+import datetime
+
 
 class AdminRegister(models.Model):
     username=models.CharField(max_length=50)
@@ -28,6 +30,7 @@ class staffadd(models.Model):
     joindate=models.DateField()
     experience=models.CharField(max_length=30)
     address=models.TextField()
+    status=models.IntegerField(default=None)
 
 class doctoradd(models.Model):
     docid=models.CharField(max_length=20)
@@ -46,4 +49,32 @@ class doctoradd(models.Model):
     address=models.TextField()
     description=models.TextField()
     status=models.IntegerField(default=None)
+
+class doctorop(models.Model):
+    doctorid=models.ForeignKey(doctoradd,on_delete=CASCADE)
+    monday=models.IntegerField(blank=True)
+    tuesday=models.IntegerField(blank=True)
+    wednesday=models.IntegerField(blank=True)
+    thursday=models.IntegerField(blank=True)
+    friday=models.IntegerField(blank=True)
+    saturday=models.IntegerField(blank=True)
+    sunday=models.IntegerField(blank=True)
+
+class doctortimings(models.Model):
+    doctorid=models.ForeignKey(doctoradd,on_delete=CASCADE)
+    start=models.TimeField(default=datetime.time(16, 00))
+    end=models.TimeField(default=datetime.time(16, 00))
+    pertime=models.CharField(max_length=30,default=True)
+
+class dropschedule(models.Model):
+    doctorid=models.ForeignKey(doctoradd,on_delete=CASCADE)
+    day=models.CharField(max_length=30,default=True,blank=True)
+
+
+
+
+
+
+
+
 

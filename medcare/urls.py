@@ -22,6 +22,7 @@ urlpatterns = [
     # path('admin/', admin.site.urls),
     path('',include("hms.urls")),
     path('admin/',include("hmsadmin.urls")),
-    path('doctor/',include("hmsdoctor.urls"))
+    path('doctor/',include("hmsdoctor.urls")),
+    path('reception/',include("hmsreception.urls"))
 ]
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

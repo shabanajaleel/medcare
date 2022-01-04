@@ -10,55 +10,66 @@
   <h3 class="p-2 ">Schedule a doctor</h3>
  
    <div class="row content">
-    <form action="" id="schedule-form">
+    <form action="/admin/scheduledoctor/" id="schedule-form" method="POST">
+      {% csrf_token %}
         <div class="row p-2">
           
             <div class="col-sm-12 m-2">
                 <div class="row">
-              <div class="col-sm-6">
-                <input type="text" placeholder="Dr ID" class="form-control" r>
-              </div>
+              
 
               <div class="col-sm-6 ">
                 
-                <select name="" id="" class="form-select bg-light">
+                <select name="doctorid" id="" class="form-select bg-light">
                     <option value="" selected>Select your doctor</option>
-                    <option value="" >Dr Rahees</option>
-                    <option value="">Dr Raj</option>
-                    <option value="">Dr Geetha</option>
+                    {% for i in doc %}
+                    <option value="{{i.id}}" >{{i.fname}}</option>
+                    
+                    {% endfor %}
                 </select>
+               
                 </div>
             </div>
             </div>
      
             <div class="col-sm-12 m-2">
-            <label for="select Date">Select Date:</label>
-               <input type="date" name="op-date" placeholder="select Date" class="form-control">
+            <label for="select Date" class="text-secondary">Select OP Days:</label>&nbsp
+               <label for=""> monday</label>&nbsp<input type="checkbox" name="day" id="" value="monday">&nbsp&nbsp 
+               <label for=""> tuesday</label>&nbsp<input type="checkbox" name="day" id="" value="tuesday">&nbsp&nbsp 
+               <label for=""> wednesday</label>&nbsp<input type="checkbox" name="day" id="" value="wednesday">&nbsp&nbsp 
+               <label for=""> thursday</label>&nbsp<input type="checkbox" name="day" id="" value="thursday">&nbsp&nbsp 
+               <label for=""> friday</label>&nbsp<input type="checkbox" name="day" id="" value="friday">&nbsp&nbsp 
+               <label for=""> saturday</label>&nbsp<input type="checkbox" name="day" id="" value="saturday">&nbsp&nbsp 
+               <label for=""> sunday</label>&nbsp<input type="checkbox" name="day" id="" value="sunday">&nbsp&nbsp 
             </div>
+            <div class="col-sm-12 m-2">
+              <label  class="text-secondary">Starting Time:</label>
+            </div>
+           
                 
             <div class="col-sm-12 m-2">
             
-                <input type="text" name="start" placeholder="starting time " class="form-control">
+                <input type="time" name="start" placeholder="starting time " class="form-control">
+            </div>
+            <div class="col-sm-12 m-2">
+              <label  class="text-secondary">Ending Time:</label>
             </div>
             <div class="col-sm-12 m-2">
             
-                <input type="text" name="end" placeholder="ending time " class="form-control">
+                <input type="time" name="end" placeholder="ending time " class="form-control">
             </div>
 
             <div class="col-sm-12 m-2">
             
-                <input type="text" name="perpatient" placeholder="op time per patient " class="form-control">
+                <input type="number" name="perpatient" placeholder="op time per patient " class="form-control">
             </div>
-            <div class="col-sm-12 m-2">
             
-                <input type="text" name="avail" placeholder="availability " class="form-control">
-            </div>
 
 
           
 
        
-           
+           {{msg}}
             
             <div class="col-sm-4 offset-sm-4 p-2 text-center">
             <button type="submit" class="btn btn-secondary">Submit</button>

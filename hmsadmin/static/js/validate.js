@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     //login form validation
       $("#signup-form").validate({
           rules:{
@@ -26,7 +27,10 @@ $(document).ready(function(){
             }
           }
       }),
-    
+      jQuery.validator.addMethod("phoneUS", function (mobile, element) {
+        mobile =mobile.replace(/\s+/g, "");
+        return this.optional(element) ||mobile.length > 9 && mobile.match(/^(\+?1-?)?(\([2-9]\d{2}\)|[2-9]\d{2})-?[2-9]\d{2}-?\d{4}$/);
+    }, "Please specify a valid phone number");
       //doctor validation
       $("#doctor-form").validate({
         rules:{
@@ -41,8 +45,8 @@ $(document).ready(function(){
           mobile:{
               required:true,
               number: true,
-              minlength: 10,
-              maxlength: 10
+              phoneUS: true,
+              
           },
           password:{
               required: true,
@@ -176,10 +180,7 @@ $(document).ready(function(){
            
             dep:"required",
     
-            inputimage: {
-                required: true,
-                extension: "png|jpe?g|gif",
-                filesize: 1048576  },
+           
            
             description:{
               required:true,
@@ -188,7 +189,7 @@ $(document).ready(function(){
         },
         messages:{
           dep:"* please enter department",
-          inputimage: "*File must be JPG, GIF or PNG, less than 1MB",
+     
          
           description:{
             required:"* please enter your Address",

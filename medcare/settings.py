@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'hms',
     'hmsadmin',
     'hmsdoctor',
+    'hmsreception',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

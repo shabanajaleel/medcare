@@ -23,7 +23,7 @@
             <div class="list-group list-group-flush my-3">
                 <a href="" class="list-group-item list-group-item-action  second-text active"><i
                         class="fas fa-tachometer-alt me-2"></i>Dashboard</a>
-                <a href="" class="list-group-item list-group-item-action second-text fw-bold"><i
+                <a href="{% url 'profile' %}" class="list-group-item list-group-item-action second-text fw-bold"><i
                         class="fas fa-project-diagram me-2"></i>My Profile</a>
                 <a href="" class="list-group-item list-group-item-action  second-text fw-bold"><i
                         class="fas fa-hospital-user bi me-2 "></i>Appointments</a>
@@ -51,14 +51,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
+                           
                             <a class="nav-link dropdown-toggle text-white fw-bold"  id="navbarDropdown"
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user me-2"></i>Dr Nikhil
+                                <i class="fas fa-user me-2"></i>{{doc.fname}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
       
                                 <li><a class="dropdown-item" href="logout">Logout</a></li>
                             </ul>
+                            
                         </li>
                         
                     </ul>

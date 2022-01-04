@@ -12,13 +12,20 @@
    <div class="row content">
     <form action="/admin/addstaffcat/"  method="POST" >
       {% csrf_token %}
+      {% if cat %}
+      <!-- update code -->
+      {% for i in cat %}
         <div class="row p-2">
           
-   
+          <div class="col-sm-12 m-2">
+            
+            <input type="text" name="id" class="form-control" value={{i.id}} hidden>
+         
+          </div>
      
             <div class="col-sm-12 m-2">
             
-               <input type="text" name="catogory" placeholder="Department" class="form-control">
+               <input type="text" name="catogory" placeholder="Department" class="form-control" value={{i.catogoryname}}>
             </div>
             <div class="col-sm-12 m-2">
                 {{msg}}
@@ -30,6 +37,28 @@
             <button type="submit" class="btn btn-secondary">Submit</button>
             <a href="{% url 'department' %}" class="btn btn-secondary">Back</a>
             </div>
+            </div>
+            {% endfor %}
+            {% else %}
+
+            <!-- insert code -->
+            <div class="row p-2">
+
+              <div class="col-sm-12 m-2">
+              
+                 <input type="text" name="catogory" placeholder="Department" class="form-control">
+              </div>
+              <div class="col-sm-12 m-2">
+                  {{msg}}
+              </div>
+ 
+              <div class="col-sm-4 offset-sm-4 p-2 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+              <a href="{% url 'department' %}" class="btn btn-secondary">Back</a>
+              </div>
+              </div>
+              {% endif %}
+
           </form>
            </div>
             </div>

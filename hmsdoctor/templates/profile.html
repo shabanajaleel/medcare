@@ -1,0 +1,80 @@
+
+{% extends 'docheader.html'%}
+{% load static %}
+{% block content %}
+{% for i in pro %}
+<div class="container-fluid px-4">
+    <div class="row g-3 my-2">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div class="d-flex flex-column">
+                <img src="/hmsadmin/media/{{i.imagefile}}" alt="">
+            </div>
+
+        </div>
+        <div class="col-md-5 text-secondary">
+            <div class="d-flex flex-column p-3">
+                <h3>{{i.fname}}{{i.lname}},{{i.quali}}</h3>
+            </div>
+            <div class="d-flex flex-column p-3">
+                <div class="d-flex flex-row">
+                    DEPARTMENT  :{{i.department.depname}}
+                </div>
+                <div class="d-flex flex-row">
+                    EXPERIENCE:{{i.experience}} years
+                </div>
+                <div class="d-flex flex-row">
+                    QUALIFICATION:{{i.quali}}
+                </div>
+                <div class="d-flex flex-row">
+                   LOCATION:{{i.place}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-7 ">
+                <p class="justify-content-around">{{i.description}} </p>
+            </div>
+            <div class="col-md-4  text-secondary">
+                <h3>OP Timings</h3>
+                <div class="d-flex flex-column mt-1">
+                    MONDAY : 3.00PM - 5.00PM
+                    <div class="d-flex flex-column mt-1">
+                        WEDNESDAY : 3.00PM - 5.00PM
+                    </div>
+                   
+                    <div class="d-flex flex-column mt-1">
+                        FRIDAY : 3.00PM - 5.00PM
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <button class="btn btn-secondary mx-2">Edit profile</button>
+                <button class="btn btn-secondary mx-2">Edit OP Timing</button>
+            </div>
+            <div class="col-md-2"></div>
+            
+        </div>
+       
+
+        
+
+      
+
+      
+      
+      
+    </div>
+
+
+
+</div>
+{% endfor %}
+{% endblock %}

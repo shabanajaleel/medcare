@@ -17,13 +17,14 @@
     {% endfor %}
     <hr>
     <h1 class=text-center>Our Specialised Doctors</h1>
-    <div class="row doct-details">
-        
+    {% for i in doc %}
+    <div class="row doct-details mt-">
+       
         <div class="col-lg-3 col-md-3">
-            <img src="{% static 'img/images (5).jpeg' %}" alt="" class="img-fluid dp-img">
+            <img src="/hmsadmin/media/{{i.imagefile}}" alt="" class="img-fluid dp-img">
         </div>
         <div class="col-lg-6 col-md-6 card definition">
-            <h3>Dr Prakash</h3>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus quae culpa laboriosam, ratione sit unde dolorum esse provident rerum nulla odit tempora facere ducimus molestias rem temporibus error a. Commodi.</div>
+            <h3>Dr {{i.fname}}{{i.lname}}</h3>{{i.description}}</div>
         
             <div class="col-lg-2 mt-2">
               <div class="accordion accordion-flush " id="accordionFlushExample">
@@ -35,8 +36,7 @@
                   </h2>
                   <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body">
-                      -MBBS <br>
-                      -MD</div>
+                     {{i.quali}}
                   </div>
                 </div>
                 <div class="accordion-item ">
@@ -46,15 +46,19 @@
                     </button>
                   </h2>
                   <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body"> Dermatologist for 3 years.</div>
+                    <div class="accordion-body"> Dermatologist for {{i.experience}} years.</div>
                   </div>
                 </div>
               
               </div>
-                  </div>   
+                  </div>
+                   
         </div>
+      
+        </div>
+        {% endfor %} 
             
-        <div class="row doct-details">
+        <!-- <div class="row doct-details">
         <div class="col-lg-3 col-md-3">
             <img src="{% static 'img/images (4).jpeg'' %}" alt="" class="img-fluid dp-img">
         </div>
@@ -89,48 +93,9 @@
                   
                   </div>
 
-
-
-
-
-
-
-                  <!--<div id="accordion">
-                        <div class="card">
-                          <div class="card-header buttonparent" id="heading1">
-                            
-                              <button class="btn buttonset" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapseOne">
-                             Qualification
-                              </button>
-                          
-                          </div>
-                      
-                          <div id="collapse1" class="collapse " aria-labelledby="heading1" data-parent="#accordion">
-                            <div class="card-body">
-                             -MBBS
-                             -MD
-                            </div>
-                          </div>
-                        </div>
-                        <div class="card">
-                          <div class="card-header buttonparent" id="heading2">
-                            
-                              <button class="btn buttonset collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
-                                Experience
-                              </button>
-                            
-                          </div>
-                          <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
-                            <div class="card-body">
-                                - Dermatologist for 3 years.
-                            </div>
-                          </div>
-                        </div>
-                      
-                      </div>-->  
                       </div>
                      
-                    </div>
+                    </div> -->
                     
         
         
@@ -139,8 +104,8 @@
             <h2>Get Appointment</h2>
                          
             </div>
-             
-                      <div class="col-lg-10 mt-5 mt-lg-0 " data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-2 mt-5"></div>
+                      <div class="col-lg-10 mt-5" data-aos="fade-up" data-aos-delay="200">
                         <form action="forms/contact.php" id="appoint-form" method="post" role="form" class="php-email-form">
                           <div class="row">
                             <div class="form-group col-md-6">
@@ -193,6 +158,7 @@
                           <div class="text-center"><button type="submit">Submit</button></div>
                         </form>
                       </div>
+                      <div class="col-lg-1 mt-5  "></div>
                      
                     </div>
                 

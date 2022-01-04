@@ -27,7 +27,7 @@
     <td>{{i.catogoryname}}</td>
     
     <td class="text-end"><a href="{% url 'deletecat' cat_id=i.id %}" class="btn btn-danger ">Delete</a>
-        <button class="btn btn-success ">Edit</button>
+        <a href= "{% url 'updatecat' updcat_id=i.id %}" class="btn btn-success ">Edit</a>
     </td>
     
    
